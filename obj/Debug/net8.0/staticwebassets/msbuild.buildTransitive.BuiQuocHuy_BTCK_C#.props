@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BuiQuocHuy_BTCK_C#.props" />
+</Project>
