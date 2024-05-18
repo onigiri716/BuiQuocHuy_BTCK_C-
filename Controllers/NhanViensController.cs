@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BuiQuocHuy_BTCK_C_.Data;
 using BuiQuocHuy_BTCK_C_.Models;
-
+    
 namespace BuiQuocHuy_BTCK_C_.Controllers
 {
     public class NhanViensController : Controller
@@ -54,8 +54,14 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MaNV,Ho,TenDem,Ten,Sdt,Email,DiaChi,NgaySinh,ChucVu,CreatedById,CreatedOn,ModifiedById,ModifiedOn")] NhanVien nhanVien)
+        public async Task<IActionResult> Create(NhanVien nhanVien)
+
         {
+            nhanVien.CreatedById = "Admin";
+            nhanVien.CreatedOn = DateTime.Now;
+            nhanVien.ModifiedById = "Admin";
+            nhanVien.ModifiedOn = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 _context.Add(nhanVien);
@@ -86,8 +92,11 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MaNV,Ho,TenDem,Ten,Sdt,Email,DiaChi,NgaySinh,ChucVu,CreatedById,CreatedOn,ModifiedById,ModifiedOn")] NhanVien nhanVien)
+        public async Task<IActionResult> Edit(int id, NhanVien nhanVien)
+
         {
+            nhanVien.ModifiedById = "Admin";
+            nhanVien.ModifiedOn = DateTime.Now;
             if (id != nhanVien.Id)
             {
                 return NotFound();
