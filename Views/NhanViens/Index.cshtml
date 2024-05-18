@@ -7,9 +7,14 @@
 <h1>Danh sách nhân viên</h1>
 
 <p>
-    <a asp-action="Create">Thêm mới dữ liệu</a>
+    <a asp-action="Create" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Thêm mới dữ liệu</a>
 </p>
-<table class="table">
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>
@@ -35,6 +40,8 @@
                 @Html.DisplayNameFor(model => model.ChucVu)
             </th>
             
+            <th></th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -63,11 +70,21 @@
                 @Html.DisplayFor(modelItem => item.ChucVu)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Chỉnh sửa</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary"><i class="fa fa-pen"></i> Sửa</a>
+               
             </td>
+            <td>
+
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-eye"></i> Xem</a>
+                
+            </td>
+                        <td>
+
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
+                        </td>
         </tr>
 }
     </tbody>
 </table>
+</div>
+</div>
