@@ -4,38 +4,38 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Thông tin nhân viên</h1>
 
 <div>
-    <h4>NhanVien</h4>
+    <h4>Chi tiết</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaNV)
+            Mã nhân viên
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MaNV)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ho)
+            Họ
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Ho)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenDem)
+            Tên đệm
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TenDem)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ten)
+            Tên
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Ten)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sdt)
+            Số điện thoại
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Sdt)
@@ -47,43 +47,43 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DiaChi)
+            Địa chỉ
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DiaChi)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NgaySinh)
+            Ngày sinh
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NgaySinh)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ChucVu)
+            Chức vụ
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ChucVu)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedById)
+            Tạo bởi
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedById)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedOn)
+            Ngày tạo
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedOn)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ModifiedById)
+            Chỉnh sửa bởi
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModifiedById)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ModifiedOn)
+            Ngày chỉnh sửa
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModifiedOn)
@@ -91,6 +91,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Chỉnh sửa</a> |
+    <a asp-action="Index">Quay lại danh sách</a>
 </div>

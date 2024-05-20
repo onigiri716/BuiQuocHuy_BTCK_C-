@@ -19,6 +19,7 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
             _context = context;
         }
 
+        
         // GET: NhanViens
         public async Task<IActionResult> Index()
         {

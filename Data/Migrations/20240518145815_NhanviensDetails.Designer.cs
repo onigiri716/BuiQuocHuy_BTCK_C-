@@ -66,7 +66,7 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<string>("Sdt")
                         .IsRequired()

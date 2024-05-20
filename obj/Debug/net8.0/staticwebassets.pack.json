@@ -577,6 +577,14 @@
       "PackagePath": "staticwebassets\\Adminhtml\\dist\\img\\AdminLTELogo.png"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\Blue_Archive_logo.svg.png",
+      "PackagePath": "staticwebassets\\Adminhtml\\dist\\img\\Blue_Archive_logo.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\Screenshot 2024-05-20 221653.png",
+      "PackagePath": "staticwebassets\\Adminhtml\\dist\\img\\Screenshot 2024-05-20 221653.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\avatar.png",
       "PackagePath": "staticwebassets\\Adminhtml\\dist\\img\\avatar.png"
     },

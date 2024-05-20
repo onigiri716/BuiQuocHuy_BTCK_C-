@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "APGMRYeW1vc5+VoKpvMj9oaLWkyQ2VhQSHZItIrjIAE=",
+  "Hash": "j96fQCHmGqa7+Eg3ynxH3a4XvI2/roYZ030/aQHi290=",
   "Source": "BuiQuocHuy_BTCK_C#",
   "BasePath": "_content/BuiQuocHuy_BTCK_C#",
   "Mode": "Default",
@@ -4007,6 +4007,25 @@
       "OriginalItemSpec": "wwwroot\\Adminhtml\\dist\\img\\avatar5.png"
     },
     {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\Blue_Archive_logo.svg.png",
+      "SourceId": "BuiQuocHuy_BTCK_C#",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\",
+      "BasePath": "_content/BuiQuocHuy_BTCK_C#",
+      "RelativePath": "Adminhtml/dist/img/Blue_Archive_logo.svg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Adminhtml\\dist\\img\\Blue_Archive_logo.svg.png"
+    },
+    {
       "Identity": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\boxed-bg.jpg",
       "SourceId": "BuiQuocHuy_BTCK_C#",
       "SourceType": "Discovered",
@@ -4366,6 +4385,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Adminhtml\\dist\\img\\photo4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\Screenshot 2024-05-20 221653.png",
+      "SourceId": "BuiQuocHuy_BTCK_C#",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\",
+      "BasePath": "_content/BuiQuocHuy_BTCK_C#",
+      "RelativePath": "Adminhtml/dist/img/Screenshot 2024-05-20 221653.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Adminhtml\\dist\\img\\Screenshot 2024-05-20 221653.png"
     },
     {
       "Identity": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\Adminhtml\\dist\\img\\user1-128x128.jpg",
