@@ -5,9 +5,11 @@
         public int Id { get; set; }
         public string MaNV { get; set; }
         public string Ho { get; set; }
-        public string TenDem { get; set; }
+        public string? TenDem { get; set; }
         public string Ten { get; set; }
-        public string FullName => $"{Ho} {TenDem} {Ten}";
+    
+
+        [PhoneNumberValidation]
         public string Sdt { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }

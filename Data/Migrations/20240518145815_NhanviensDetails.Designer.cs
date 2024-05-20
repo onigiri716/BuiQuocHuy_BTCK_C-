@@ -77,7 +77,6 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenDem")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

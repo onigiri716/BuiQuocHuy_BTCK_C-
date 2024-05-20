@@ -19,7 +19,7 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MaNV = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ho = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TenDem = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TenDem = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ten = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sdt = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),

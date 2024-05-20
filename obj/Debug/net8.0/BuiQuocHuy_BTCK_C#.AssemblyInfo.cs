@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuiQuocHuy_BTCK_C#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2196d5232cfaecf6979b5e2a246fcaaff05c52df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d262e6ffb24561dd0a675efb0d6f558edce2fcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuiQuocHuy_BTCK_C#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuiQuocHuy_BTCK_C#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
