@@ -9365,6 +9365,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\js\\timepicker.js",
+      "PackagePath": "staticwebassets\\js\\timepicker.js"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

@@ -10,23 +10,22 @@ using BuiQuocHuy_BTCK_C_.Models;
 
 namespace BuiQuocHuy_BTCK_C_.Controllers
 {
-    public class ThongBaosController : Controller
+    public class PhongBansController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ThongBaosController(ApplicationDbContext context)
+        public PhongBansController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: ThongBaos
+        // GET: PhongBans
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.ThongBaos.Include(t => t.TheLoai);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await _context.PhongBans.ToListAsync());
         }
 
-        // GET: ThongBaos/Details/5
+        // GET: PhongBans/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,45 +33,38 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                 return NotFound();
             }
 
-            var thongBao = await _context.ThongBaos
-                .Include(t => t.TheLoai)
+            var phongBan = await _context.PhongBans
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (thongBao == null)
+            if (phongBan == null)
             {
                 return NotFound();
             }
 
-            return View(thongBao);
+            return View(phongBan);
         }
 
-        // GET: ThongBaos/Create
+        // GET: PhongBans/Create
         public IActionResult Create()
         {
-            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Ten");
             return View();
         }
 
-        // POST: ThongBaos/Create
+        // POST: PhongBans/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ThongBao thongBao)
+        public async Task<IActionResult> Create(PhongBan phongBan)
         {
-            thongBao.CreatedById = "Admin";
-            thongBao.CreatedOn = DateTime.Now;
-            thongBao.ModifiedById = "Admin";
-            thongBao.ModifiedOn = DateTime.Now;
            
-                _context.Add(thongBao);
+                _context.Add(phongBan);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             
-            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Ten", thongBao.TheLoaiId);
-            return View(thongBao);
+            return View(phongBan);
         }
 
-        // GET: ThongBaos/Edit/5
+        // GET: PhongBans/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,25 +72,22 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                 return NotFound();
             }
 
-            var thongBao = await _context.ThongBaos.FindAsync(id);
-            if (thongBao == null)
+            var phongBan = await _context.PhongBans.FindAsync(id);
+            if (phongBan == null)
             {
                 return NotFound();
             }
-            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Id", thongBao.TheLoaiId);
-            return View(thongBao);
+            return View(phongBan);
         }
 
-        // POST: ThongBaos/Edit/5
+        // POST: PhongBans/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,ThongBao thongBao)
+        public async Task<IActionResult> Edit(int id, PhongBan phongBan)
         {
-            thongBao.ModifiedById = "Admin";
-            thongBao.ModifiedOn = DateTime.Now;
-            if (id != thongBao.Id)
+            if (id != phongBan.Id)
             {
                 return NotFound();
             }
@@ -107,12 +96,12 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
             {
                 try
                 {
-                    _context.Update(thongBao);
+                    _context.Update(phongBan);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ThongBaoExists(thongBao.Id))
+                    if (!PhongBanExists(phongBan.Id))
                     {
                         return NotFound();
                     }
@@ -123,11 +112,10 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Ten", thongBao.TheLoaiId);
-            return View(thongBao);
+            return View(phongBan);
         }
 
-        // GET: ThongBaos/Delete/5
+        // GET: PhongBans/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,35 +123,34 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                 return NotFound();
             }
 
-            var thongBao = await _context.ThongBaos
-                .Include(t => t.TheLoai)
+            var phongBan = await _context.PhongBans
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (thongBao == null)
+            if (phongBan == null)
             {
                 return NotFound();
             }
 
-            return View(thongBao);
+            return View(phongBan);
         }
 
-        // POST: ThongBaos/Delete/5
+        // POST: PhongBans/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var thongBao = await _context.ThongBaos.FindAsync(id);
-            if (thongBao != null)
+            var phongBan = await _context.PhongBans.FindAsync(id);
+            if (phongBan != null)
             {
-                _context.ThongBaos.Remove(thongBao);
+                _context.PhongBans.Remove(phongBan);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ThongBaoExists(int id)
+        private bool PhongBanExists(int id)
         {
-            return _context.ThongBaos.Any(e => e.Id == id);
+            return _context.PhongBans.Any(e => e.Id == id);
         }
     }
 }

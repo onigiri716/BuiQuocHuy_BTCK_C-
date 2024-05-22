@@ -1,0 +1,56 @@
+﻿@model BuiQuocHuy_BTCK_C_.Models.LichTrinh
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Tạo</h1>
+
+<h4>Thêm công việc mới</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="NgayLamViec" class="control-label">Ngày bắt đầu</label>
+                <input asp-for="NgayLamViec" class="form-control" />
+                <span asp-validation-for="NgayLamViec" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="NgayKetThuc" class="control-label">Ngày kết thúc</label>
+                <input asp-for="NgayKetThuc" class="form-control" />
+                <span asp-validation-for="NgayKetThuc" class="text-danger"></span>
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoTa" class="control-label">Mô tả</label>
+                <input asp-for="MoTa" class="form-control" />
+                <span asp-validation-for="MoTa" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="PhongBanId" class="control-label">Phòng Ban</label>
+                <select asp-for="PhongBanId" class ="form-control" asp-items="ViewBag.PhongBanId"></select>
+            </div>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

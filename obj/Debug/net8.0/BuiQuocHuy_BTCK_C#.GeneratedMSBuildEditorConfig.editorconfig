@@ -38,6 +38,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/LichTrinhs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/LichTrinhs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/LichTrinhs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/LichTrinhs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/LichTrinhs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaFRyaW5oc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/NhanViens/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,6 +76,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/NhanViens/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/PhongBans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/PhongBans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/PhongBans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/PhongBans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/PhongBans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmdCYW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/source/repos/BuiQuocHuy_BTCK_C\#/BuiQuocHuy_BTCK_C\#/Views/Shared/Error.cshtml]

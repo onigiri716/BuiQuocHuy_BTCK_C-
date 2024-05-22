@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Zu1Jt5AoKI+D5HgBDMph6Ntekpqfem9zDVGPDwvx5D06w+PerG5gtD/sKVAtYmRQ4ydLxBN+79IzdsbM4LqAyw==",
+  "dgSpecHash": "OnYEftQVmgE8XzG0+918uZkDFRgMUEvSs+nH4uVWX8IGFqYQq3rHHY3UIzYEM3ioHKhuU/PLT6ZNBUK6r9HQLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#\\BuiQuocHuy_BTCK_C#.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,8 @@
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\jquery\\1.7.1\\jquery.1.7.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\jquery-timepicker\\1.0.0\\jquery-timepicker.1.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.4\\microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.4\\microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\8.0.4\\microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.4.nupkg.sha512",

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace BuiQuocHuy_BTCK_C_.Data.Migrations
+namespace BuiQuocHuy_BTCK_C_.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -21,6 +21,46 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.LichTrinh", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedById")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MoTa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedById")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("NgayKetThuc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("NgayLamViec")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PhongBanId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PhongBanId");
+
+                    b.ToTable("LichTrinhs");
+                });
 
             modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.NhanVien", b =>
                 {
@@ -79,6 +119,39 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NhanViens");
+                });
+
+            modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.PhongBan", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedById")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MaPB")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedById")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TenPB")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PhongBans");
                 });
 
             modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.TheLoai", b =>
@@ -350,6 +423,17 @@ namespace BuiQuocHuy_BTCK_C_.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.LichTrinh", b =>
+                {
+                    b.HasOne("BuiQuocHuy_BTCK_C_.Models.PhongBan", "PhongBan")
+                        .WithMany()
+                        .HasForeignKey("PhongBanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PhongBan");
                 });
 
             modelBuilder.Entity("BuiQuocHuy_BTCK_C_.Models.ThongBao", b =>

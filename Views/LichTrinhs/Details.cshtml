@@ -1,0 +1,66 @@
+﻿@model BuiQuocHuy_BTCK_C_.Models.LichTrinh
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Chi tiết công việc</h1>
+
+<div>
+    <h4>Lịch trình</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Ngày bắt đầu
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NgayLamViec)
+        </dd>
+        <dt class = "col-sm-2">
+            Ngày kết thúc
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NgayKetThuc)
+        </dd>
+        <dt class = "col-sm-2">
+            Mô tả
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        <dt class = "col-sm-2">
+            Phòng Ban
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhongBan.TenPB)
+        </dd>
+        <dt class = "col-sm-2">
+            Tạo bởi
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedById)
+        </dd>
+        <dt class = "col-sm-2">
+            Tạo vào ngày
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+        <dt class = "col-sm-2">
+           Sửa bởi
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedById)
+        </dd>
+        <dt class = "col-sm-2">
+            Sửa vào ngày
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+    </dl>
+</div>
+<div>
+    <<a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Chỉnh sửa</a> |
+    <a asp-action="Index">Quay lại danh sách</a>
+</div>

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trang Quản Lý</title>
 
+    <link rel="stylesheet" href="~/lib/jquery-timepicker/jquery.timepicker.min.css" />
+
+
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -107,6 +111,30 @@
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Quản lý thể loại
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="LichTrinhs" asp-action="Index" class="nav-link">
+                                <i class="nav-icon fas fa-calendar"></i>
+                                <p>
+                                    Quản lý Lịch Trình
+                                </p>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a asp-controller="PhongBans" asp-action="Index" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Quản lý Phòng Ban
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="LichTrinhs" asp-action="Index" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Quản lý Lịch trình
                                 </p>
                             </a>
                         </li>
@@ -213,6 +241,9 @@
     <script src="~/Adminhtml/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="~/Adminhtml/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="~/Adminhtml/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <script src="~/lib/jquery-timepicker/jquery.timepicker.min.js"></script>
+    <script src="~/js/timepicker.js"></script>
     <script>
         $(function () {
             $("#example1").DataTable({
@@ -227,6 +258,17 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.timepicker').timepicker({
+                timeFormat: 'H:mm',
+                interval: 30, // Khoảng thời gian tăng giảm (30 phút)
+                dynamic: false,
+                dropdown: true,
+                scrollbar: true
             });
         });
     </script>

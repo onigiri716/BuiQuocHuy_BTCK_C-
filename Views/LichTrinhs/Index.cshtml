@@ -1,0 +1,62 @@
+﻿@model IEnumerable<BuiQuocHuy_BTCK_C_.Models.LichTrinh>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ngày bắt đầu
+            </th>
+            <th>
+               Thời gian
+            </th>
+            <th>
+                Ngày kết thúc
+            </th>
+            <th>
+                Thời gian
+            </th>
+           <th>
+               Mô tả
+           </th>
+            <th>
+                Tạo bởi
+            </th>
+            <th>
+                Tạo vào lúc
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>@item.NgayLamViec.ToString("dd/MM/yyyy")</td>
+                <td>@item.NgayLamViec.ToString(@"hh\:mm")</td>
+                <td>@item.NgayKetThuc.ToString("dd/MM/yyyy")</td>
+                <td>@item.NgayKetThuc.ToString(@"hh\:mm")</td>
+                <td>@item.MoTa</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedById)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

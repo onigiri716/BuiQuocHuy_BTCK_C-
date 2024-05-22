@@ -13,7 +13,8 @@
           "Microsoft.AspNetCore.Identity.UI": "8.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.4",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "jquery-timepicker": "1.0.0"
         },
         "runtime": {
           "BuiQuocHuy_BTCK_C#.dll": {}
@@ -591,6 +592,12 @@
           "lib/net6.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "jQuery/1.7.1": {},
+      "jquery-timepicker/1.0.0": {
+        "dependencies": {
+          "jQuery": "1.7.1"
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/8.0.4": {
@@ -2342,6 +2349,20 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
+    },
+    "jQuery/1.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kxMYpP0to5Q2NGoV30zVIl/vqWt42vDEQ7JOjefewwKTwitv5XijF5iP+4Bl99t1lujA1Y1/1KwLMkJl1/oJjw==",
+      "path": "jquery/1.7.1",
+      "hashPath": "jquery.1.7.1.nupkg.sha512"
+    },
+    "jquery-timepicker/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i0HmRQSdLHl6t2p6KBi+gOk+AgdcGWRGyVIPLWWPNdZqa7siVxiaVtROOwy2089YFCM8OSYpg/RNdDEdA2BR0Q==",
+      "path": "jquery-timepicker/1.0.0",
+      "hashPath": "jquery-timepicker.1.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.4": {
       "type": "package",
