@@ -85,7 +85,7 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
             {
                 return NotFound();
             }
-            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Id", thongBao.TheLoaiId);
+            ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Ten", thongBao.TheLoaiId);
             return View(thongBao);
         }
 
@@ -103,8 +103,7 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+           
                 try
                 {
                     _context.Update(thongBao);
@@ -122,7 +121,7 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewData["TheLoaiId"] = new SelectList(_context.TheLoais, "Id", "Ten", thongBao.TheLoaiId);
             return View(thongBao);
         }

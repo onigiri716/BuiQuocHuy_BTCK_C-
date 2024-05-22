@@ -56,8 +56,11 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PhongBan phongBan)
         {
-           
-                _context.Add(phongBan);
+            phongBan.CreatedById = "Admin";
+            phongBan.CreatedOn = DateTime.Now;
+            phongBan.ModifiedById = "Admin";
+            phongBan.ModifiedOn = DateTime.Now;
+            _context.Add(phongBan);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             
@@ -87,6 +90,9 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, PhongBan phongBan)
         {
+            
+            phongBan.ModifiedById = "Admin";
+            phongBan.ModifiedOn = DateTime.Now;
             if (id != phongBan.Id)
             {
                 return NotFound();

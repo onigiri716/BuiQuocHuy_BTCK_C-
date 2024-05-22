@@ -4,55 +4,61 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Chỉnh sửa</h1>
 
-<h4>LichTrinh</h4>
+<h4>Chi tiết công việc</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+            <div class="row">
+                <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="NgayLamViec" class="control-label"></label>
                 <input asp-for="NgayLamViec" class="form-control" />
                 <span asp-validation-for="NgayLamViec" class="text-danger"></span>
             </div>
+            </div>
+                <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="NgayKetThuc" class="control-label"></label>
                 <input asp-for="NgayKetThuc" class="form-control" />
                 <span asp-validation-for="NgayKetThuc" class="text-danger"></span>
             </div>
+            </div>
+            </div>
+              
             <div class="form-group">
                 <label asp-for="MoTa" class="control-label"></label>
                 <input asp-for="MoTa" class="form-control" />
                 <span asp-validation-for="MoTa" class="text-danger"></span>
             </div>
+                <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="PhongBanId" class="control-label"></label>
                 <select asp-for="PhongBanId" class="form-control" asp-items="ViewBag.PhongBanId"></select>
                 <span asp-validation-for="PhongBanId" class="text-danger"></span>
             </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="CreatedById" class="control-label"></label>
                 <input asp-for="CreatedById" class="form-control" />
                 <span asp-validation-for="CreatedById" class="text-danger"></span>
             </div>
+            </div>
+                <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="CreatedOn" class="control-label"></label>
                 <input asp-for="CreatedOn" class="form-control" />
                 <span asp-validation-for="CreatedOn" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ModifiedById" class="control-label"></label>
-                <input asp-for="ModifiedById" class="form-control" />
-                <span asp-validation-for="ModifiedById" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ModifiedOn" class="control-label"></label>
-                <input asp-for="ModifiedOn" class="form-control" />
-                <span asp-validation-for="ModifiedOn" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

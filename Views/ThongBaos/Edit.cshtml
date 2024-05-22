@@ -4,9 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Chỉnh sửa</h1>
 
-<h4>ThongBao</h4>
+<h4>Chi tiết thông báo</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,49 +14,40 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="TieuDe" class="control-label"></label>
+                <label asp-for="TieuDe" class="control-label">Tiêu đề</label>
                 <input asp-for="TieuDe" class="form-control" />
                 <span asp-validation-for="TieuDe" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MoTa" class="control-label"></label>
+                <label asp-for="MoTa" class="control-label">Mô tả</label>
                 <input asp-for="MoTa" class="form-control" />
                 <span asp-validation-for="MoTa" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TheLoaiId" class="control-label"></label>
+                <label asp-for="TheLoaiId" class="control-label">Thể loại</label>
                 <select asp-for="TheLoaiId" class="form-control" asp-items="ViewBag.TheLoaiId"></select>
                 <span asp-validation-for="TheLoaiId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CreatedById" class="control-label"></label>
+                <label asp-for="CreatedById" class="control-label">Tạo bởi</label>
                 <input asp-for="CreatedById" class="form-control" />
                 <span asp-validation-for="CreatedById" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
+                <label asp-for="CreatedOn" class="control-label">Tạo vào ngày</label>
                 <input asp-for="CreatedOn" class="form-control" />
                 <span asp-validation-for="CreatedOn" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
-                <label asp-for="ModifiedById" class="control-label"></label>
-                <input asp-for="ModifiedById" class="form-control" />
-                <span asp-validation-for="ModifiedById" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ModifiedOn" class="control-label"></label>
-                <input asp-for="ModifiedOn" class="form-control" />
-                <span asp-validation-for="ModifiedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Quay lại danh sách</a>
 </div>
 
 @section Scripts {

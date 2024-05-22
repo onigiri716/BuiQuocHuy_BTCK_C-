@@ -59,8 +59,11 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create( LichTrinh lichTrinh)
         {
-           
-                _context.Add(lichTrinh);
+            lichTrinh.CreatedById = "Admin";
+            lichTrinh.CreatedOn = DateTime.Now;
+            lichTrinh.ModifiedById = "Admin";
+            lichTrinh.ModifiedOn = DateTime.Now;
+            _context.Add(lichTrinh);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             
@@ -92,13 +95,14 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, LichTrinh lichTrinh)
         {
+            lichTrinh.ModifiedById = "Admin";
+            lichTrinh.ModifiedOn = DateTime.Now;
             if (id != lichTrinh.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+           
                 try
                 {
                     _context.Update(lichTrinh);
@@ -116,7 +120,7 @@ namespace BuiQuocHuy_BTCK_C_.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewData["PhongBanId"] = new SelectList(_context.PhongBans, "Id", "TenPB", lichTrinh.PhongBanId);
             return View(lichTrinh);
         }

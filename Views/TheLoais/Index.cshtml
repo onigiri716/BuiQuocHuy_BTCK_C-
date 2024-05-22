@@ -4,30 +4,29 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Danh sách thể loại</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Thêm mới dữ liệu</a>
 </p>
-<table class="table">
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title"></h3>
+    </div>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Ten)
+                Tên thể loại
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedById)
+                Tạo bởi
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
+                Vào ngày
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedById)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedOn)
-            </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
@@ -42,12 +41,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CreatedOn)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedById)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedOn)
-            </td>
+           
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary"><i class="fa fa-pen"></i> Sửa</a>
 
@@ -65,3 +59,5 @@
 }
     </tbody>
 </table>
+</div>
+</div> 

@@ -4,50 +4,50 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Thông tin chi tiết</h1>
 
 <div>
-    <h4>ThongBao</h4>
+    <h4>Thông báo</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TieuDe)
+            Tiêu đề
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TieuDe)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MoTa)
+            Mô tả
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MoTa)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TheLoai)
+            Thể loại
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TheLoai.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedById)
+            Tạo bởi
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedById)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedOn)
+            Tạo vào ngày
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedOn)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ModifiedById)
+            Sửa bởi
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModifiedById)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ModifiedOn)
+            Sửa vào ngày
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModifiedOn)
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary"><i class="fa fa-pen"></i> Chỉnh sửa</a> |
+    <a asp-action="Index">Quay lại danh sách</a>
 </div>

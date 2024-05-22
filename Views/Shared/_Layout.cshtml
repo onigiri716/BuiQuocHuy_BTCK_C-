@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trang Quản Lý</title>
 
-    <link rel="stylesheet" href="~/lib/jquery-timepicker/jquery.timepicker.min.css" />
 
 
 
@@ -40,7 +39,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="~/Adminhtml/dist/img/Blue_Archive_logo.svg.png" alt="AdminLTELogo" height="100" width="300">
+            <img class="animation__shake" src="~/Adminhtml/dist/img/Yuru_Camp_logo.svg.png" alt="AdminLTELogo" height="100" width="300">
   </div>
 
   <!-- Navbar -->
@@ -66,8 +65,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
             <a asp-controller="Home" asp-action="Index" class="brand-link">
-                <img src="~/Adminhtml/dist/img/Blue_Archive_logo.svg.png" alt="Company Logo" class="brand-image" style="opacity: .8">
-                <span class="brand-text font-weight-light"><b>Blue Archive</b></span>
+                <img src="~/Adminhtml/dist/img/Yuru_Camp_logo.svg.png" alt="Company Logo" class="brand-image" style="opacity: .8">
+                <span class="brand-text font-weight-light"><b>CampingCom</b></span>
     </a>
 
     <!-- Sidebar -->
@@ -75,7 +74,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-                        <img src="~/Adminhtml/dist/img/Screenshot 2024-05-20 221653.png" class="img-circle elevation-2" alt="User Image">
+                        <img src="~/Adminhtml/dist/img/Screenshot 2024-05-22 202413.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Bùi Quốc Huy</a>
@@ -98,45 +97,56 @@
                                 </p>
                             </a>
                         </li>
+                        
+                        
                         <li class="nav-item">
-                            <a asp-controller="ThongBaos" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
                                 <p>
-                                    Quản lý thông báo
+                                    Quản lý công việc
+                                    <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-controller="ThongBaos" asp-action="Index" class="nav-link">
+                                        <i class="far fa-bell nav-icon"></i>
+                                        <p>Quản lý thông báo</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="LichTrinhs" asp-action="Index" class="nav-link">
+                                        <i class="far fa-calendar nav-icon"></i>
+                                        <p>Quản lý lịch trình</p>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </li>
+                         
                         <li class="nav-item">
-                            <a asp-controller="TheLoais" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-bars"></i>
                                 <p>
-                                    Quản lý thể loại
+                                    Quản lý danh mục
+                                    <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="LichTrinhs" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-calendar"></i>
-                                <p>
-                                    Quản lý Lịch Trình
-                                </p>
-                            </a>
-                        </li>
-                         <li class="nav-item">
-                            <a asp-controller="PhongBans" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Quản lý Phòng Ban
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="LichTrinhs" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
-                                <p>
-                                    Quản lý Lịch trình
-                                </p>
-                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a asp-controller="TheLoais" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Quản lý thể loại</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="PhongBans" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Quản lý phòng ban</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
                         </li>
 
           
@@ -229,7 +239,7 @@
     <script src="~/Adminhtml/dist/js/pages/dashboard.js"></script>
     <!-- DataTables  & Plugins -->
 
-    <!-- <script src="~/Adminhtml/plugins/datatables/jquery.dataTables.min.js"></script> -->
+    <!--<script src="~/Adminhtml/plugins/datatables/jquery.dataTables.min.js"></script> -->
     <script src="~/Adminhtml/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="~/Adminhtml/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="~/Adminhtml/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
@@ -248,7 +258,7 @@
         $(function () {
             $("#example1").DataTable({
                 "responsive": true, "lengthChange": false, "autoWidth": false,
-                "buttons": ["colvis"]
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
             $('#example2').DataTable({
                 "paging": true,
@@ -260,18 +270,7 @@
                 "responsive": true,
             });
         });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.timepicker').timepicker({
-                timeFormat: 'H:mm',
-                interval: 30, // Khoảng thời gian tăng giảm (30 phút)
-                dynamic: false,
-                dropdown: true,
-                scrollbar: true
-            });
-        });
-    </script>
+        </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
