@@ -13,6 +13,6 @@ namespace BuiQuocHuy_BTCK_C_.Data
         }
         public DbSet<NhanVien> NhanViens { get; set; }
         public DbSet<ThongBao> ThongBaos { get; set; }
-        public DbSet<LichTrinh> LichTrinhs { get; set; }
+        public DbSet<TheLoai> TheLoais { get; set; }
     } 
 }

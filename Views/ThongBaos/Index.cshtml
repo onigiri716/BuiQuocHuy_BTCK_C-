@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BuiQuocHuy_BTCK_C_.Models.ThongBao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Quản lý thông báo</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Thêm mới dữ liệu</a>
+</p>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title"></h3>
+    </div>
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Tiêu đề
+            </th>
+            <th>
+                Nội dung
+            </th>
+            <th>
+                Thể loại
+            </th>
+            <th>
+                Tạo bởi
+            </th>
+            <th>
+                Tạo vào ngày
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TieuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheLoai.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedById)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+           
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary"><i class="fa fa-pen"></i> Sửa</a>
+
+                </td>
+                <td>
+
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning"><i class="fa fa-eye"></i> Xem</a>
+
+                </td>
+                <td>
+
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+        </<div>
+        </div>

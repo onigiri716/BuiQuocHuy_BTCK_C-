@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Newtonsoft.Json.Serialization;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BuiQuocHuy_BTCK_C_.Models
 {
